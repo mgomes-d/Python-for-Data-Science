@@ -16,13 +16,14 @@ def get_parameters(string, func):
 def building(text):
     punctuation = "!" + '"' + "#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
     print(f'The text contains {len(text)} characters:')
-    print(f'- {get_parameters(text, str.isupper)} upper letters')
-    print(f'- {get_parameters(text, str.islower)} lower letters')
-    print(f'- {get_parameters(text, punctuation)} punctuation marks')
-    print(f'- {get_parameters(text, str.isspace)} spaces')
-    print(f'- {get_parameters(text, str.isdigit)} digits')
+    print(f'{get_parameters(text, str.isupper)} upper letters')
+    print(f'{get_parameters(text, str.islower)} lower letters')
+    print(f'{get_parameters(text, punctuation)} punctuation marks')
+    print(f'{get_parameters(text, str.isspace)} spaces')
+    print(f'{get_parameters(text, str.isdigit)} digits')
 
 def main():
+
     try:
         if len(sys.argv) <= 1:
             string = input("What is the text to count?\n")
