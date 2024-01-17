@@ -11,9 +11,7 @@ def slice_me(family: np.ndarray, start: int, end: int) -> np.ndarray:
         assert isinstance(family, np.ndarray) is True, \
             "family is not a np.ndarray"
         arr = np.array(family)
-        print(f'My shape is : {arr.shape}')
-        newarr = arr[start:end, start:end, 2]
-        print(f'My new shape is : {newarr.shape}')
+        newarr = arr[start:end, start:end, 1]
         return newarr
     except AssertionError as msg:
         print("AssertionError:", msg)
@@ -24,11 +22,15 @@ def main():
     img_array = ft_load("animal.jpeg")
     if img_array is None:
         return 1
-    print(img_array)
     new_img_array = slice_me(img_array, 350, 750)
     if new_img_array is None:
         return 1
-    new_img = Image.fromarray(new_img_array)
+    print("The shape of the image is:", new_img_array.shape)
+    print(new_img_array)
+    img_array_transpose = new_img_array.T
+    print("New shape after Transpose:", img_array_transpose.shape)
+    print(img_array_transpose)
+    new_img = Image.fromarray(img_array_transpose)
     new_img.show()
 
 
