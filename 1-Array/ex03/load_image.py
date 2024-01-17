@@ -1,5 +1,4 @@
 from PIL import Image
-from PIL import UnidentifiedImageError
 import numpy as np
 
 
@@ -15,4 +14,4 @@ def ft_load(path: str) -> np.ndarray:
     except FileNotFoundError or UnidentifiedImageError \
     or ValueError or TypeError as msg:
         print(msg)
-
+        return
