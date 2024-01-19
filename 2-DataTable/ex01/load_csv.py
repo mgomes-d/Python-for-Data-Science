@@ -3,7 +3,7 @@ import numpy as np
 
 
 def load(path: str) -> pd.DataFrame:
-    """read the csv"""
+    """read the csv file"""
     try:
         assert path.lower().endswith(".csv"), "Path in wrong format, .csv"
         df = pd.read_csv(path)
