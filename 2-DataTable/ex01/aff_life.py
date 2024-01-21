@@ -2,7 +2,7 @@ from load_csv import load
 import matplotlib.pyplot as plt
 
 
-def aff_life():
+def main():
     try:
         data_frame = load("life_expectancy_years.csv")
         country_data = data_frame[data_frame['country'] == 'Belgium']
@@ -10,7 +10,7 @@ def aff_life():
             years = country_data.columns[1::40]
             plt.plot(country_data.columns[1:], country_data.iloc[0, 1:])
             plt.xticks(years)
-            plt.title(f'Life Expectancy Over the Years - Belgium')
+            plt.title(f'Belgium Life expectancy Projections')
             plt.xlabel('Year')
             plt.ylabel('Life Expectancy')
             plt.show()
@@ -19,4 +19,6 @@ def aff_life():
     except Exception as e:
         print(f"An error occurred: {e}")
 
-aff_life()
+
+if __name__ == "__main__":
+    main()
