@@ -1,6 +1,5 @@
 from load_csv import load
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 def main():
@@ -10,7 +9,7 @@ def main():
     life_expenctancy_1900 = life_expenctancy["1900"]
     income_person_1900 = income_person["1900"]
     plt.scatter(income_person_1900, life_expenctancy_1900)
-    x_ticks = np.array([300.0, 1000.0, 10000.0])
+    x_ticks = [300.0, 1000.0, 10000.0]
     plt.xlabel("Gross domestic product")
     plt.ylabel("Life Expectancy")
     plt.title("1900")
