@@ -15,4 +15,3 @@ class King(Baratheon, Lannister):
 
     def get_hairs(self):
         return self.hairs
-    #your code here
