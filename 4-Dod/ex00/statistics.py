@@ -36,6 +36,10 @@ def ft_variance(array):
     return result
 
 def ft_statistics(*args: any, **kwargs: any) -> None:
+    """take in *args a quantity of unknown number and make the Mean, Median,
+    Quartile (25% and 75%), Standard Deviation and Variance according to the **kwargs
+    ask.
+    """
     numbers = []
     for value in args:
         numbers.append(value)
